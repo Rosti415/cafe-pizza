@@ -1,0 +1,12 @@
+.head_r{
+    background: linear-gradient(to left, #0033cc 0%, #9966ff 100%);
+    /* Градієнт йде від синього до темно-синього зліва направо */
+
+}
+.head_nav{
+    background: linear-gradient(to right, #9966ff 0%,#0033cc 100%);
+
+}
+body{
+font-family: "Raleway", sans-serif;
+}
