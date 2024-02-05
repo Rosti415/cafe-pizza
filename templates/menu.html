@@ -15,9 +15,11 @@
           <li class="nav-item">
             <a class="nav-link" href="/order">Замолення</a>
           </li>
+          {% for category in categories %}
           <li class="nav-item">
-            <a class="nav-link" href="/help">Підтримка</a>
+            <a class="nav-link" href="#">{{category[1]}}</a>
           </li>
+          {% endfor %}
         </ul>
       </div>
     </div>

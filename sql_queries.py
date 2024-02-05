@@ -21,3 +21,17 @@ class CafeDB():
         data = self.cursor.fetchall()
         self.close()
         return data
+    
+    def get_products_by_category(self,category_id):
+        self.open()
+        self.cursor.execute("SELECT * FROM products WHERE category_id=(?)",[category_id])
+        data = self.cursor.fetchall()
+        self.close()
+        return data
+    
+    def get_all_categories(self):
+        self.open()
+        self.cursor.execute("SELECT * FROM categories")
+        data = self.cursor.fetchall()
+        self.close()
+        return data

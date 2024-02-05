@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div id="carouselExampleCaptions" class="carousel slide">
+<div id="carouselExampleCaptions" class="carousel slide mx-auto" style="max-height: 70vh; max-width: 100vh; border-radius: 10px;">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="max-height: 70vh; max-width: 100vh;border-radius: 10px;">
     <div class="carousel-item active">
       <img src="{{ url_for('static', filename='img/3.jpg') }}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
@@ -40,8 +40,13 @@
   </button>
 </div>
 
+<div class = "text-center" >
+<h1  class ="my-3">Cafe pizza</h1>
+<p class = "mx-5"><i>Cafe-pizza -  це віртуальне приміщення, де шанувальники вишуканого смаку можуть 
+  насолоджуватися вишуканими стравами та напоями, не покидаючи дому. 
+  Наше меню огортає смачність та різноманіття кухні, пропонуючи онлайн-замовлення зі зручністю доставки прямо до вашого порогу.</i> </p>
+</div>
 
 
-<p>Rostyslav</p>
 
 {% endblock content %}

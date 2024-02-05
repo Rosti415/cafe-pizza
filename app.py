@@ -6,25 +6,32 @@ db = CafeDB("shop.db")
 
 @app.route("/")#вказуєм url для виклику функції
 def main_page():
-    return render_template("index.html")#результат який відображається
+    categories = db.get_all_categories()
+    return render_template("index.html",categories=categories)#результат який відображається
 
 @app.route("/dish")
 def dish():
+    categories = db.get_all_categories()
     products = db.get_all_products()
     print(products)
-    return render_template("dishes.html")
+    return render_template("dishes.html",products=products,categories=categories)
 
 @app.route("/drink")
 def drink():
-    return render_template("drink.html")
+    categories = db.get_all_categories()
+    products = db.get_all_products()
+    print(products)
+    return render_template("drink.html", products=products,categories=categories)
 
 @app.route("/order")
 def order():
-    return render_template("order.html")
+    categories = db.get_all_categories()
+    return render_template("order.html",categories=categories)
 
 @app.route("/help")
 def support():
-    return render_template("support.html")
+    categories = db.get_all_categories()
+    return render_template("support.html",categories=categories)
 
 
 
