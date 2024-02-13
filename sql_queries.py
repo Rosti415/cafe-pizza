@@ -35,3 +35,10 @@ class CafeDB():
         data = self.cursor.fetchall()
         self.close()
         return data
+        
+    def get_product(self,product_id):
+        self.open()
+        self.cursor.execute("SELECT * FROM products WHERE id=(?)",[product_id])
+        data = self.cursor.fetchone()
+        self.close()
+        return data

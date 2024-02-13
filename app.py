@@ -28,10 +28,11 @@ def order():
     categories = db.get_all_categories()
     return render_template("order.html",categories=categories)
 
-@app.route("/help")
-def support():
+@app.route("/category/<category_id>")
+def products_by_categories(category_id):
     categories = db.get_all_categories()
-    return render_template("support.html",categories=categories)
+    products = db.get_products_by_category(int(category_id))
+    return render_template("category_product.html",categories=categories,products = products)
 
 
 
