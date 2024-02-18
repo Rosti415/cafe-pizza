@@ -10,21 +10,115 @@
 body{
 font-family: "Raleway", sans-serif;
 margin: 0;
+width: 100%;
+height: 100vh;
+align-items: center;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.bds{
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+.contact-in{
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #666;
+}
+.contact-map{
+    width: 100px;
+    height: auto;
+    flex: 50%;
+}
+
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+    
+}
+.contact-form{
+    width: 100px;
+    padding: 30px;
+    height: auto;
+    display: flex;
+    flex: auto;
+    text-align: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.contact-form h1{
+    margin-bottom: 10px;
+    
+}
+.contact-form-txt{
+    width: 100px;
+    height: 40px;
+    color: #000;
+    border: 1px solid #bcbcbc;
+    border-radius: 50px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.contact-form-txt::placeholder{
+    color: #aaa;
+}
+
+.contact-form-txtarea{
+    width: 100px;
+    height: 130px;
+    color: #000;
+    border: 1px solid #bcbcbc;
+    border-radius: 50px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.contact-form-txtarea::placeholder{
+    color: #aaa;
+}
+
+.contact-form-btn{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: #8e2de2;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+
 
 .dark-card{
     background-color: #333; /* Dark background color */
     color: #fff;
 }
 
-.container{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.font-secondary {
+    font-family: 'Pacifico', cursive;
 }
+
+
+
 iframe{
     width: 80%;
     height: 500px;
@@ -182,4 +276,23 @@ h2,
     .navbar-dark .navbar-nav .nav-link  {
         padding: 10px 0;
     }
+}
+
+
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.1);
+    filter: blur(5px)
+}
+
+.team-item .team-overlay {
+    transition: .5s;
+    opacity: 0;
+}
+
+.team-item:hover .team-overlay {
+    opacity: 1;
 }
