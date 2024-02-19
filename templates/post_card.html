@@ -3,6 +3,6 @@
     <div class="card-body">
       <h5 class="card-title">{{product[1]}}</h5>
       <p class="card-text overflow-y-hidden" style ="height: 7rem">{{product[2]}}</p>
-      <a href="#" class="btn btn-outline-light">Купити</a>
+      <a href= "{{ url_for('order', product_id=product[0]) }}" class="btn btn-outline-light">Замовити</a>
     </div>
   </div>

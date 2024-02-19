@@ -35,6 +35,13 @@ class CafeDB():
         data = self.cursor.fetchall()
         self.close()
         return data
+    
+    def get_category(self,img_id):
+        self.open()
+        self.cursor.execute("SELECT img FROM categories WHERE id = ?", (img_id,))
+        data = self.cursor.fetchone()
+        self.close()
+        return data
         
     def get_product(self,product_id):
         self.open()
@@ -42,3 +49,9 @@ class CafeDB():
         data = self.cursor.fetchone()
         self.close()
         return data
+
+    def order(self,product_id,name,addres,quantity,phone,comment):
+        self.open()
+        self.cursor.execute(''' INSERT INTO orders(product_id,quantity,adress,name,phone,comment) VALUES(?,?,?,?,?,?)''', [product_id,quantity,addres,name,phone,comment])
+        self.conn.commit()
+        self.close()
