@@ -3,8 +3,11 @@
 
 {% block content %}
 <div class="container">
-    <h2 class="my-4 text-center">Замовлення</h2>
 
+    <h2 class="my-4 text-center">Замовлення</h2>
+    {% for type, message in get_flashed_messages(True) %}
+    <div class="alert {{type}} my-3 "> {{message}} </div>
+    {% endfor %}
 <div class="row">
     <form class="col p-3 m-3" action="" method="post" enctype="multipart/form-data">
         <div class="mb-3">

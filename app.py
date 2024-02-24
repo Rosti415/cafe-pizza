@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request,flash
 from sql_queries import CafeDB
 import os
 
@@ -42,8 +42,11 @@ def order(product_id):
     categories = db.get_all_categories()
     product = db.get_product(product_id)
     if request.method == "POST":
-        db.order(product_id,request.form['name'],request.form['addres'],request.form['quantity'],request.form['phone'],request.form['comment'])
-
+        try:
+            db.order(product_id,request.form['name'],request.form['addres'],request.form['quantity'],request.form['phone'],request.form['comment'])
+            flash("Замовлення оформлено","alert-succes")
+        except:
+            flash("Замовлення оформлено","alert-danger")
     return render_template("order.html",categories=categories,product=product)
 
 

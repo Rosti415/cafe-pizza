@@ -7,6 +7,12 @@
     background: linear-gradient(to right, #9966ff 0%,#0033cc 100%);
 
 }
+
+.cel{
+    color: #bcbcbc;
+    margin: 0;
+    padding: 0;
+}
 body{
 font-family: "Raleway", sans-serif;
 margin: 0;
@@ -300,4 +306,10 @@ h2,
 
 .team-item:hover .team-overlay {
     opacity: 1;
+}
+
+.price{
+    padding: 0;
+    margin: 0;
+    
 }
