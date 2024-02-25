@@ -44,10 +44,15 @@ def order(product_id):
     if request.method == "POST":
         try:
             db.order(product_id,request.form['name'],request.form['addres'],request.form['quantity'],request.form['phone'],request.form['comment'])
-            flash("Замовлення оформлено","alert-succes")
+            flash("Замовлення оформлено","alert-success")
         except:
             flash("Замовлення оформлено","alert-danger")
     return render_template("order.html",categories=categories,product=product)
+
+@app.route("/login")#вказуєм url для виклику функції
+def support():
+    categories = db.get_all_categories()
+    return render_template("support.html",categories=categories)
 
 
 if __name__ == "__main__":

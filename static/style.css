@@ -14,7 +14,7 @@
     padding: 0;
 }
 body{
-font-family: "Raleway", sans-serif;
+font-family: "Mulish", monospace ;
 margin: 0;
 width: 100%;
 height: 100vh;
@@ -313,3 +313,56 @@ h2,
     margin: 0;
     
 }
+
+
+
+
+.sup{
+    text-align: center;
+}
+
+.textinfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.accordion-item {
+    background-color: #343a40; /* темний фон */
+    border-color: #000000; /* колір рамки */
+    border-width: 1px; /* товщина рамки */
+    border-style: solid; /* стиль рамки */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* тінь */
+  }
+  
+  .accordion-button {
+    background-color: #343a40; /* темний фон */
+    color: #ffffff; /* білий колір тексту */
+  }
+  
+  .accordion-button:not(.collapsed)::after {
+    background-color: #ffffff; /* білий колір стрілки */
+  }
+  
+  .accordion-body {
+    background-color: #343a40; /* темний фон */
+    color: #ffffff; /* білий колір тексту */
+  }
+  
+  .accordion-body a {
+    color: #ffffff; /* білий колір посилань */
+  }
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.image-container img {
+    max-height: 70vh;
+    max-width: 100vh;
+    border-radius: 10px;
+  }
+  
